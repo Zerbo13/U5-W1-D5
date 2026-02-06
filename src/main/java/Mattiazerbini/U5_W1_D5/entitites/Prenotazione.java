@@ -25,10 +25,13 @@ public class Prenotazione {
     @JoinColumn(name = "id_utente")
     private Utente id_utente;
 
-    public Prenotazione(LocalDate giorno) {
+    public Prenotazione(LocalDate giorno, Postazione id_postazione, Utente id_utente) {
         this.giorno = giorno;
+        this.id_postazione = id_postazione;
+        this.id_utente = id_utente;
     }
 
     public Prenotazione() {
     }
+
 }

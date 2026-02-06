@@ -23,11 +23,12 @@ public class Postazione {
     @JoinColumn(name = "id_edificio")
     private Edificio edificio;
 
-    public Postazione(int codice_univoco, String descrizione, Tipo tipo_postazione, int numero_occupanti) {
+    public Postazione(int codice_univoco, String descrizione, Tipo tipo_postazione, int numero_occupanti, Edificio edificio) {
         this.codice_univoco = codice_univoco;
         this.descrizione = descrizione;
         this.tipo_postazione = tipo_postazione;
         this.numero_occupanti = numero_occupanti;
+        this.edificio = edificio;
     }
 
     public Postazione() {
