@@ -18,13 +18,13 @@ public class Runner implements CommandLineRunner {
 
     private final UtenteService uService;
     private final PostazioneService pService;
-    private final PrenotazioneService prservice;
+    private final PrenotazioneService prService;
     private final EdificioService eService;
 
-    public Runner(UtenteService uService, PostazioneService pService, PrenotazioneService prservice, EdificioService eService) {
+    public Runner(UtenteService uService, PostazioneService pService, PrenotazioneService prService, EdificioService eService) {
         this.uService = uService;
         this.pService = pService;
-        this.prservice = prservice;
+        this.prService = prService;
         this.eService = eService;
     }
 
@@ -57,10 +57,10 @@ public class Runner implements CommandLineRunner {
 
         Prenotazione pr1 = new Prenotazione(LocalDate.now(), p1, u3 );
         Prenotazione pr2 = new Prenotazione(LocalDate.of(2025,02,12), p3, u2 );
-        Prenotazione pr3 = new Prenotazione(LocalDate.of(2025,03,120), p2, u1 );
+        Prenotazione pr3 = new Prenotazione(LocalDate.of(2025,03,12), p2, u1 );
 
-        prservice.salvaPrenotazione(pr1);
-        prservice.salvaPrenotazione(pr2);
-        prservice.salvaPrenotazione(pr3);
+        prService.salvaPrenotazione(pr1);
+        prService.salvaPrenotazione(pr2);
+        prService.salvaPrenotazione(pr3);
     }
 }

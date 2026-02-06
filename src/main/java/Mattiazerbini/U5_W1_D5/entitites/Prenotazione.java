@@ -15,20 +15,20 @@ public class Prenotazione {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private LocalDate giorno;
+    private LocalDate data;
 
     @ManyToOne
     @JoinColumn(name = "id_postazione")
-    private Postazione id_postazione;
+    private Postazione postazione;
 
     @ManyToOne
     @JoinColumn(name = "id_utente")
-    private Utente id_utente;
+    private Utente utente;
 
-    public Prenotazione(LocalDate giorno, Postazione id_postazione, Utente id_utente) {
-        this.giorno = giorno;
-        this.id_postazione = id_postazione;
-        this.id_utente = id_utente;
+    public Prenotazione(LocalDate data, Postazione postazione, Utente utente) {
+        this.data = data;
+        this.postazione = postazione;
+        this.utente = utente;
     }
 
     public Prenotazione() {

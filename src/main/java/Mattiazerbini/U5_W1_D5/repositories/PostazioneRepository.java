@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PostazioneRepository extends JpaRepository<Postazione, Long> {
-    boolean existsByCodice_univoco(int codice_univoco);
+    boolean existsByCodiceUnivoco(int codiceUnivoco);
 }

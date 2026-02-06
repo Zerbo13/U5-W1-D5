@@ -11,7 +11,7 @@ public class Postazione {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private int codice_univoco;
+    private int codiceUnivoco;
     private String descrizione;
 
     @Enumerated(EnumType.STRING)
@@ -23,8 +23,8 @@ public class Postazione {
     @JoinColumn(name = "id_edificio")
     private Edificio edificio;
 
-    public Postazione(int codice_univoco, String descrizione, Tipo tipo_postazione, int numero_occupanti, Edificio edificio) {
-        this.codice_univoco = codice_univoco;
+    public Postazione(int codiceUnivoco, String descrizione, Tipo tipo_postazione, int numero_occupanti, Edificio edificio) {
+        this.codiceUnivoco = codiceUnivoco;
         this.descrizione = descrizione;
         this.tipo_postazione = tipo_postazione;
         this.numero_occupanti = numero_occupanti;

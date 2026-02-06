@@ -22,10 +22,10 @@ public class PostazioneService {
     }
 
     public void salvaPostazione(Postazione newPostazione){
-        if(postazioneRepository.existsByCodice_univoco((newPostazione.getCodice_univoco())))
-            throw  new ValidationException("Questa postazione " +newPostazione.getCodice_univoco()+ " è gia registrata");
+        if(postazioneRepository.existsByCodiceUnivoco((newPostazione.getCodiceUnivoco())))
+            throw  new ValidationException("Questa postazione " +newPostazione.getCodiceUnivoco()+ " è gia registrata");
         this.postazioneRepository.save(newPostazione);
-        log.info("La postazione " +newPostazione.getCodice_univoco()+" è stato salvato!");
+        log.info("La postazione " +newPostazione.getCodiceUnivoco()+" è stato salvato!");
     }
 
     public Postazione findByPostazioneId(long id){

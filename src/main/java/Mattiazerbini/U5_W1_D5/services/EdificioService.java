@@ -23,11 +23,9 @@ public class EdificioService {
     public EdificioService(EdificioRepository edificioRepository){
         this.edificioRepository = edificioRepository;
     }
-    public void salvaEdificio(Edificio newEdificio){
-        if(edificioRepository.existsById((newEdificio.getId())))
-            throw  new ValidationException("Questo edificio " +newEdificio.getNome()+ " è gia registrato");
-        this.edificioRepository.save(newEdificio);
-        log.info("L'edificio " +newEdificio.getNome()+" è stato salvato!");
+    public void salvaEdificio(Edificio edificio){
+        edificioRepository.save(edificio);
+        log.info("L'edificio " +edificio.getNome()+" è stato salvato!");
     }
 
     public Edificio findByEdificioId(long id){
